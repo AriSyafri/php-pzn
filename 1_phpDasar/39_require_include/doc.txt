@@ -1,0 +1,3 @@
+require jika file diambil tidak ada maka akan terjadi error dan program terhenti
+
+include jika file diambil tidak ada maka hanya memberi peringatan, namun program akan tetap dilanjutkan
