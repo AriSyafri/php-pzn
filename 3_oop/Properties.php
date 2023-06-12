@@ -1,7 +1,7 @@
 <?php
     require_once "data/Person.php";
 
-    $person = new Person();
+    $person = new Person("Ari","Subang");
     $person->name = "Ari";
     // $person->address = "Subang";
     $person->country = "Belanda";
@@ -15,7 +15,7 @@
     echo "".PHP_EOL;
 
     // obj 2
-    $person2 = new Person();
+    $person2 = new Person("Ujang", "Surabaya");
     $person2->name = "Ujang";
     $person2->address = "Surabaya";
 

@@ -1,10 +1,16 @@
 <?php
     require_once "data/Person.php";
 
-    $person = new Person();
+    $ari = new Person("Ari","Subang");
+    $ari->name = "Ari";
+    $ari->sayHello("Udin");
+    $ari->info();
 
-    $person->sayHello("Asep");
+    $joko = new Person("Udin","Cirebon");
+    $joko->name = "Udin";
+    $joko->sayHello(null);
+    $joko->info();
 
-    
+
 
 ?>
