@@ -27,8 +27,13 @@
         echo "valid" . PHP_EOL;
     } catch (ValidationException | Exception $exception) {
         echo "Validation Error : {$exception->getMessage()}" . PHP_EOL;
+        
+        var_dump($exception->getTrace());       // ini debug exception
+
+        echo $exception->getTraceAsString() . PHP_EOL;
+
     }  finally {       // blok finally untuk eksekusi baik ada exception atau tidak
-        echo "error atau tidak dieksekusi" . PHP_EOL;
+        echo "error atau tidak, selalu dieksekusi" . PHP_EOL;
     }
 
 
