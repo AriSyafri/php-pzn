@@ -10,7 +10,7 @@
     // dengan named argument
     sayHello(last:"Agus",first:"ari",middle:"syafri");
     //sayHello(first: "ari", last: "Agus"); phpbaru gabisa
-
+    
 
 
 ?>

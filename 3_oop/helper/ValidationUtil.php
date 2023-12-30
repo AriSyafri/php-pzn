@@ -4,13 +4,14 @@
             if(!isset($request->username)) {
                 throw new ValidationException("username is not set");
             } else if (!isset($request->password)) {
-                throw new ValidattionException("password is not set");
+                throw new ValidationException("password is not set");
             } else if (is_null($request->username)) {
-                throw new ValidattionException("username is null");
+                throw new ValidationException("username is null");
             } else if (is_null($request->password)) {
-                throw new ValidattionException("password is null");
+                throw new ValidationException("password is null");
             }
         }
+
 
         // dari pada program diatas lebih baik benggunakan reflection dikarenakan lebih otomatis dan ga banyak lagi
         static function validateReflection($request) {
