@@ -3,6 +3,10 @@
     require_once "BusinessLogic/AddTodoList.php";
     require_once "BusinessLogic/RemoveTodoList.php";
     require_once "BusinessLogic/ShowTodoList.php";
+    require_once "View/ViewAddTodoList.php";
+    require_once "View/ViewRemoveTodoList.php";
+    require_once "View/ViewShowTodolist.php";
+    
 
     echo "Aplikasi to do list" . PHP_EOL;
 
