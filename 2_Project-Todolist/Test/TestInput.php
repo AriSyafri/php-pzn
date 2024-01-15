@@ -1,6 +1,6 @@
 <?php 
 
-require_once "../Helper/Input.php";
+require_once __DIR__ . "/../Helper/Input.php";
 
 $name = input("name");
 echo "hello $name" . PHP_EOL;
