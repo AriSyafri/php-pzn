@@ -42,6 +42,17 @@
             }
     
             function addTodolist(): void {
+
+                echo "Menambah Todo" . PHP_EOL;
+
+                $todo = InputHelper::input("Todo (x untuk batal)");
+            
+                if($todo == "x") {
+                    echo "Batal menambah todo" . PHP_EOL;
+                } else {
+                    $this->todolistService->addTodolist($todo);
+                }
+            
     
             }
     
