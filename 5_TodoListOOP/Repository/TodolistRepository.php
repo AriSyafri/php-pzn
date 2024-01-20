@@ -22,7 +22,21 @@
             }
 
             function remove(int $number): bool {
-                
+
+                if($number > sizeof($this->todolist)) {
+                    return false;
+                }
+            
+                //hapus dan update index
+                for ($i = $number; $i < sizeof($this->todolist); $i++){
+                    // logika nge geser 
+                    $this->todolist[$i] = $this->todolist[$i + 1];
+                    
+                }
+                // bagian hapus record terakhir
+                unset($this->todolist[sizeof($this->todolist)]);
+            
+                return true;
             }
 
             function findAll(): array {
