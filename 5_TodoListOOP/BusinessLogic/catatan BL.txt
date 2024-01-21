@@ -1,1 +1,0 @@
-Bussines logic digunakan untuk bagian proses bisnis atau fitur yang ada pada kasus ini ada tambah dan hapus
