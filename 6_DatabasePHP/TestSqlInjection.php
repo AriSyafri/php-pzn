@@ -3,9 +3,11 @@
 
     $connection = getConnection();
 
-    $username = "admin'; #";
-    $password = "gapeduli";
-    $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password';";
+    // function quote string tidak lazim diberi backslash
+
+    $username = $connection->quote("admin'; #");
+    $password = $connection->quote("gapeduli");
+    $sql = "SELECT * FROM admin WHERE username = $username AND password = $password;";
 
     echo $sql . PHP_EOL;
 
