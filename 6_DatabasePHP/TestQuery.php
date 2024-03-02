@@ -3,8 +3,19 @@
 
     $connection = getConnection();
 
-    $sql = "SELECT * FROM customers";
+    $sql = "SELECT id, name, email FROM customers";
     $statement = $connection->query($sql);
+
+    foreach ($statement as $row) {
+        // var_dump($row);
+        $id = $row["id"];
+        $email = $row["name"];
+        $name = $row["email"];
+
+        echo "Id : $id" . PHP_EOL;
+        echo "Name : $name" . PHP_EOL;
+        echo "Email : $email" . PHP_EOL;
+    }
 
     $connection = null;
 
