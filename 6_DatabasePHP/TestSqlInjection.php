@@ -3,7 +3,7 @@
 
     $connection = getConnection();
 
-    // function quote string tidak lazim diberi backslash
+    // function quote string tidak lazim diberi backslash (/)
 
     $username = $connection->quote("admin'; #");
     $password = $connection->quote("gapeduli");
