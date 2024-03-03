@@ -10,15 +10,16 @@
     use Repository\TodolistRepositoryImpl;
 
     function testShowTodolist(): void {
-        $todolistRepository = new TodolistRepositoryImpl();
 
-        $todolistRepository->todolist[1] = new Todolist("belajar php");
-        $todolistRepository->todolist[2] = new Todolist("belajar php oop");
-        $todolistRepository->todolist[3] = new Todolist("belajar php mvc");
-
+        $connection = \Config\Database::getConnection();
+        $todolistRepository = new TodolistRepositoryImpl($connection);
         $todolistService = new TodolistServiceImpl($todolistRepository);
+        $todolistService->addTodolist("belajar php native");
+        $todolistService->addTodolist("belajar php laravel 10");
 
         $todolistService->showTodolist();
+
+ 
     }
 
     function testAddTodolist(): void {
@@ -48,7 +49,7 @@
 
 
 
-    // testShowTodolist();
-    testAddTodolist();
+    testShowTodolist();
+    // testAddTodolist();
 
     // testRemoveTodolist();
