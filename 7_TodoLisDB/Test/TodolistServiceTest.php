@@ -3,6 +3,7 @@
     require __DIR__ . "/../Entity/Todolist.php";
     require __DIR__ . "/../Repository/TodolistRepository.php";
     require __DIR__ . "/../Service/TodolistService.php";
+    require __DIR__ . "/../Config/Database.php";
 
     use Entity\Todolist;
     use Service\TodolistServiceImpl;
@@ -21,13 +22,15 @@
     }
 
     function testAddTodolist(): void {
-        $todolistRepository = new TodolistRepositoryImpl();
+
+        $connection = \Config\Database::getConnection();
+        $todolistRepository = new TodolistRepositoryImpl($connection);
 
         $todolistService = new TodolistServiceImpl($todolistRepository);
         $todolistService->addTodolist("belajar php8");
         $todolistService->addTodolist("belajar php laravel");
 
-        $todolistService->showTodolist();
+        // $todolistService->showTodolist();
     }
 
     function testRemoveTodolist(): void {
@@ -57,6 +60,6 @@
 
 
     // testShowTodolist();
-    // testAddTodolist();
+    testAddTodolist();
 
-    testRemoveTodolist();
+    // testRemoveTodolist();
