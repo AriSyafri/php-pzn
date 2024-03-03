@@ -33,20 +33,38 @@
 
             function remove(int $number): bool {
 
-                if($number > sizeof($this->todolist)) {
+                // if($number > sizeof($this->todolist)) {
+                //     return false;
+                // }
+            
+                // //hapus dan update index
+                // for ($i = $number; $i < sizeof($this->todolist); $i++){
+                //     // logika nge geser 
+                //     $this->todolist[$i] = $this->todolist[$i + 1];
+                    
+                // }
+                // // bagian hapus record terakhir
+                // unset($this->todolist[sizeof($this->todolist)]);
+            
+                // return true;
+
+                $sql = "SELECT id FROM todolist WHERE id = ?";
+                $statement = $this->connection->prepare($sql);
+                $statement->execute([$number]);
+
+                if($statement->fetch()) {
+                    // todolist ada
+                    $sql = "DELETE FROM todolist WHERE id = ?";
+                    $statement = $this->connection->prepare($sql);
+                    $statement->execute([$number]);
+                    return true;
+                } else {
+                    // todolist tidak ada
                     return false;
                 }
-            
-                //hapus dan update index
-                for ($i = $number; $i < sizeof($this->todolist); $i++){
-                    // logika nge geser 
-                    $this->todolist[$i] = $this->todolist[$i + 1];
-                    
-                }
-                // bagian hapus record terakhir
-                unset($this->todolist[sizeof($this->todolist)]);
-            
-                return true;
+
+
+
             }
 
             function findAll(): array {
