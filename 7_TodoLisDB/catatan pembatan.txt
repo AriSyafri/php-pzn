@@ -1,0 +1,5 @@
+berikut langkah-langkah :
+
+1. buat app.php dulu
+2. buat folder Model untuk representasi data
+3. buat file TodoList di model untuk penyimpanan array
