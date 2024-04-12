@@ -7,7 +7,7 @@
         exit();
     }
 
-    $say = "Hello " . $_SESSION['username'];
+    $say = "Hello " . $_SESSION['username_login'];
 
 ?>
 
