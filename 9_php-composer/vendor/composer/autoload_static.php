@@ -10,6 +10,12 @@ class ComposerStaticInite8664619d76e56ae142c1ad6cfbc4f44
         'P' => 
         array (
             'Pzn\\BelajarPhpComposer\\' => 23,
+            'Psr\\Log\\' => 8,
+            'Programmerzamannow\\BelajarPhpComposerHello\\' => 43,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
         ),
     );
 
@@ -17,6 +23,18 @@ class ComposerStaticInite8664619d76e56ae142c1ad6cfbc4f44
         'Pzn\\BelajarPhpComposer\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Programmerzamannow\\BelajarPhpComposerHello\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/programmerzamannow/belajar-php-composer-hello/src',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
     );
 

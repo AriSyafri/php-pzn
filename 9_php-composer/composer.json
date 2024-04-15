@@ -13,5 +13,15 @@
             "email": "diamondThink15@gmail.com"
         }
     ],
-    "require": {}
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/AriSyafri/belajar-php-composer-hello"
+        }
+    ],
+    "require": {
+        "php" : ">=8.0",
+        "programmerzamannow/belajar-php-composer-hello" : "2.0.0",
+        "monolog/monolog" : "2.2.0"
+    }
 }
